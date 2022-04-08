@@ -26,8 +26,8 @@ def mail(request):
 		email = request.POST['email']
 		subject = request.POST['subject']
 		message = request.POST['message']
-		to = "en18el301066@medicaps.ac.in"
-		res = send_mail(name, subject, message, settings.EMAIL_HOST_USER, [to]) 
+		to = ("en18el301066@medicaps.ac.in")
+		res = send_mail(name, subject, message, settings.EMAIL_HOST_USER, to) 
 	return render(request, 'index.html')  
 
 # Create your views here.
