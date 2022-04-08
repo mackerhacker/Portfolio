@@ -28,9 +28,9 @@ def mail(request):
 	to = "en18el301066@medicaps.ac.in"
 	res = send_mail(name, subject, message, settings.EMAIL_HOST_USER, [to])
 	if(res == 1):  
-        msg = "Mail Sent Successfuly"  
-    else:  
-        msg = "Mail could not sent"  
+		msg = "Mail Sent Successfuly"  
+    	else:  
+        	msg = "Mail could not sent"  
     return render(request, 'index.html')  
 
 # Create your views here.
