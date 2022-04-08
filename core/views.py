@@ -19,18 +19,14 @@ def index(request):
 	s3 = Service.objects.all()[2]
 	return render(request,'index.html',{'ab' : ab, 'python' : python, 'html' : html, 'css' : css, 'aws' : aws, 'linux' : linux, 'js' : js, 'ed1' : ed1, 'ed2' : ed2, 'exp1' : exp1, 'exp2' : exp2, 's1' : s1, 's2' : s2, 's3' : s3})
 
-def mail(request):  
-    if request.method=="POST":
-	name = request.POST['name']
-	email = request.POST['email']
-	subject = request.POST['subject']
-	message = request.POST['message']
-	to = "en18el301066@medicaps.ac.in"
-	res = send_mail(name, subject, message, settings.EMAIL_HOST_USER, [to])
-	if(res == 1):  
-		msg = "Mail Sent Successfuly"  
-    	else:  
-        	msg = "Mail could not sent"  
-    return render(request, 'index.html')  
+def mail(request):
+	if request.method=="POST":
+		name = request.POST['name']
+		email = request.POST['email']
+		subject = request.POST['subject']
+		message = request.POST['message']
+		to = "en18el301066@medicaps.ac.in"
+		res = send_mail(name, subject, message, settings.EMAIL_HOST_USER, [to]) 
+	return render(request, 'index.html')  
 
 # Create your views here.
