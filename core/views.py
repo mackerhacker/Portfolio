@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import *
 from django.core.mail import send_mail  
-from djangoapp import settings  
+from django.conf import settings  
 
 def index(request):
 	ab = About.objects.all()[0]
