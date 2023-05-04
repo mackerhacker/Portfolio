@@ -59,7 +59,7 @@ jobs:
           name: python-app
           path: .        
           python-version: '3.7' 
-      - run: python manage.py
+      
           
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
